@@ -1,0 +1,68 @@
+.header {
+    background-color: #5e503f;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    height: 40px; 
+    margin-right: 10px;  
+  }
+  
+  .logo-text {
+    font-size: 28px; 
+    color: white; 
+    margin: 0; 
+  }
+  
+  
+  .nav {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    background-color: rgb(255, 255, 255); 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .add-button {
+    font-size: 20px;
+  }
+  
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  
+  body, .App {
+    background-color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 80px; 
+  }
+  
