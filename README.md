@@ -25,3 +25,6 @@ Explore Events: Browse through listed sports events or create your own events lo
 Join Events: Book spots in events securely and smoothly through Sportify's platform.
 Manage Events: Organisers can manage their created events, and participants can view events they have joined.
 
+
+
+Frontend Deployed link=https://66d549a5d929659d9d5708e0--sportify1.netlify.app/
