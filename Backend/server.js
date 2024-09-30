@@ -20,6 +20,16 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Could not connect to MongoDB:', err));
 
+// GET route to fetch all events
+app.get('/events', async (req, res) => {
+  try {
+    const events = await Event.find(); 
+    res.json(events); 
+  } catch (err) {
+    res.status(500).send(err.message); 
+  }
+});
+
 
 // Start the server
 app.listen(port, () => {
