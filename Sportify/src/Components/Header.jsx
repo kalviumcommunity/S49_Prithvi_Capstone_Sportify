@@ -5,7 +5,7 @@ import { Box, Avatar, Menu, MenuItem, ListItemIcon, Divider, IconButton, Typogra
 import PersonAdd from '@mui/icons-material/PersonAdd';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
-// import EventModal from './AddEventModal'; 
+import EventModal from './AddEventModal'; 
 
 function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -119,7 +119,7 @@ function Header() {
       </nav>
 
       {/* Event Modal */}
-      {/* <EventModal visible={modalVisible} onClose={closeModal} /> */}
+      <EventModal visible={modalVisible} onClose={closeModal} />
     </header>
   );
 }
