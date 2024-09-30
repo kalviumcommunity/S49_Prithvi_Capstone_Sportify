@@ -1,8 +1,27 @@
-# React + Vite
+Sportify
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Welcome to Sportify, a user-friendly platform for creating, finding, and joining sports events. Sportify aims to provide a seamless experience for users while prioritising security and ease of use.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Objective
+The objective of Sportify is to address the need for a reliable and accessible platform for organising and participating in sports events. By leveraging modern web technologies, Sportify aims to offer a smooth experience for individuals looking to create or join sports events.
+
+Features
+User Registration and Authentication: Securely register and log in to your account.
+Event Creation and Searching: Create sports events and easily search for events to join.
+Member Management: Event organisers can manage participants, while users can view events they have joined .
+Notifications: Receive updates on important events and activities.
+
+Tech Stack
+Frontend: HTML, CSS, JavaScript, React.js
+Backend: Node.js, Express.js
+Database: MongoDB
+Authentication: Clerk
+
+Getting Started
+To start using Sportify:
+Sign Up: Create an account on Sportify using your email.
+Explore Events: Browse through listed sports events or create your own events looking for extra members.
+Join Events: Book spots in events securely and smoothly through Sportify's platform.
+Manage Events: Organisers can manage their created events, and participants can view events they have joined.
+
