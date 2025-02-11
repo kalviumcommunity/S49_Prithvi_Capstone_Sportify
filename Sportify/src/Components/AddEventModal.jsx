@@ -1,37 +1,34 @@
-
-
-
-
-
 import React, { useState } from 'react';
 import { Modal, Form, Input, DatePicker, Button, InputNumber } from 'antd';
 import axios from 'axios';
 
-const AddEventModal = ({ visible, onClose }) => {
+const AddEventModal = ({ visible, onClose, onEventAdded }) => { // Add `onEventAdded` prop
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+const handleOk = async () => {
+  try {
+    setLoading(true);
+    const values = await form.validateFields();
 
-  const handleOk = async () => {
-    try {
-      setLoading(true);
-      const values = await form.validateFields(); // Get form values after validation
+    const newEvent = {
+      ...values,
+      eventDate: values.eventDate.toISOString(),
+      eventId: Math.floor(Math.random() * 10000), 
+      createdAt: new Date().toISOString(), 
+    };
 
-      // Convert DatePicker to ISO string and generate a random eventId
-      const formattedEvent = {
-        ...values,
-        eventDate: values.eventDate.toISOString(),
-        eventId: Math.floor(Math.random() * 10000), // Generate a random eventId
-      };
+    await axios.post('http://localhost:5000/newevents', newEvent);
 
-      await axios.post('http://localhost:5000/newevents', formattedEvent); // Make POST request to server
-      form.resetFields(); // Reset form after successful submission
-      onClose(); 
-    } catch (error) {
-      console.error('Error adding event:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    form.resetFields();  
+    onEventAdded(newEvent); // Send newly added event to Home.jsx
+    onClose(); // Close modal
+  } catch (error) {
+    console.error('Error adding event:', error);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <Modal

@@ -38,7 +38,6 @@ function Header() {
 
       <nav className="nav">
         <button className="nav-button">Dashboard</button>
-        <button className="nav-button add-button" onClick={openModal}>+</button> {/* Trigger modal on click */}
 
         <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
           <Tooltip title="Account settings">
