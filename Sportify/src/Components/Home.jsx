@@ -80,7 +80,7 @@ function Home() {
       <AddEventModal
   visible={isModalVisible}
   onClose={() => setIsModalVisible(false)}
-  onEventAdded={handleEventAdded} // ✅ Pass the function as a prop
+  onEventAdded={handleEventAdded} 
 />
 
       {loading ? (
